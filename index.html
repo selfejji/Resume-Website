@@ -63,11 +63,24 @@
             padding: 5px;
         }
 
-        .image-container img{
-            width: 40%;
+        .video-image{
+            width: 15%;
             object-fit: cover;
             border-radius: 5%;
             padding: 5px;
+        }
+
+        .image-container img, .image-conatiner video {
+            width: 15%;
+            object-fit: cover;
+            border-radius: 5%;
+            padding: 5px;
+            transition: transform 0.3s ease, width 0.3s ease;
+        }
+
+        .image-container img:hover, .image-container video:hover {
+            transform: scale(1.5);
+            z-index: 1;
         }
 
         .profile-text{
@@ -77,26 +90,30 @@
             right: 40px;
         }
 
-        .video-container {
-            display: inline-block;
-            vertical-align: top;
-            width: 60%;
-            overflow: hidden;
-            padding: 5px;
-            margin-right: 150px;
-
-        }
-
-        .video-container video {
-            width: 35%;
-            height: auto;
-            border-radius: 5%;
-        }
 
         .image-container {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }   
+
+        .profile-image{
+            object-fit: cover;
+            border-radius: 5%;
+            padding: 5px;
+        }
+
+        .cat-image{
+            object-fit: cover;
+            border-radius: 5%;
+            padding: 5px;
+        }
+
+        .guitar-image{
+            object-fit: cover;
+            border-radius: 5%;
+            padding: 5px;
         }
         
     </style>
@@ -117,15 +134,12 @@
     <div class="content">
         <section>
             <section class="profile-section">
-                <div class="image-container"></div>
+                <div class="image-container">
                     <img src="/Users/selfejji/GitHub Repos/Resume-Website/Assets/IMG_6129.png" alt="Profile Picture" class="profile-image">
-                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6533.png" alt="Cats">
-                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6172.png" alt="Guitar">
-                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_3580.png" alt="Nature">
-                </div>
-                <div class="video-container">
-                    <video width="100%" height="auto" loop autoplay muted>
-                        <source src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_0183.mp4" type="video/mp4">
+                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6533.png" alt="Cats" class="cat-image">
+                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6172.png" alt="Guitar" class="guitar-image">
+                    <video class="video-image" loop autoplay muted>
+                         <source src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_0183.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
