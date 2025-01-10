@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
+        .content {
+        padding: 20px;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         header {
-            background-image: url('./ResumeWebsite/Resume-Website/Assets/Header-Background.PNG');
+            background-image: url('/Users/selfejji/GitHub Repos/Resume-Website/Assets/Header-Background.PNG');
             background-size: cover;
-            padding: 40px;
+            padding: 100px;
             text-align: right;
             color: White;
         }
+
+        .header-text{
+            font-size: 60px;
+            font-weight: bold;
+        }
+
         nav {
             display: flex;
             justify-content: center;
@@ -24,12 +34,23 @@
         }
         nav a {
             color: white;
-            padding: 14px 20px;
+            padding: 12px 65px;
             text-decoration: none;
             text-align: center;
         }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            width: 75%;
+            font-size: 25px;
+            align-items: center;
+            white-space: nowrap;
+        }
+
         nav a:hover {
-            background-color: #555;
+            background-color: #9d6900;
+            line-height: 60px;
         }
         .content {
             padding: 20px;
@@ -43,7 +64,7 @@
         }
 
         .image-container img{
-            width: 70%;
+            width: 40%;
             object-fit: cover;
             border-radius: 5%;
             padding: 5px;
@@ -55,24 +76,58 @@
             bottom: 60px;
             right: 40px;
         }
+
+        .video-container {
+            display: inline-block;
+            vertical-align: top;
+            width: 60%;
+            overflow: hidden;
+            padding: 5px;
+            margin-right: 150px;
+
+        }
+
+        .video-container video {
+            width: 35%;
+            height: auto;
+            border-radius: 5%;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
         
     </style>
 </head>
 <body>
     <header>
-        <h1>Sammy Elfejji</h1>
+        <h1 class="header-text">Sammy Elfejji</h1>
     </header>
     <nav>
-        <a href="./ResumeWebsite/Resume-Website/projects.html">Projects</a>
-        <a href="./ResumeWebsite/Resume-Website/certifications.html">Certifications</a>
-        <a href="./ResumeWebsite/Resume-Website/work-experience.html">Work Experience</a>
-        <a href="./ResumeWebsite/Resume-Website/contact.html">Contact</a>
+        <div class="nav-links">
+            <a href="/Users/selfejji/GitHub Repos/Resume-Website/index.html">Home</a>
+            <a href="/Users/selfejji/GitHub Repos/Resume-Website/projects.html">Projects</a>
+            <a href="/Users/selfejji/GitHub Repos/Resume-Website/certifications.html">Certifications</a>
+            <a href="/Users/selfejji/GitHub Repos/Resume-Website/work-experience.html">Work Experience</a>
+            <a href="/Users/selfejji/GitHub Repos/Resume-Website/contact.html">Contact</a>
+        </div>
     </nav>
     <div class="content">
         <section>
             <section class="profile-section">
-                <div class="image-container">
-                    <img src="./ResumeWebsite/Resume-Website/Assets/profile-image.jpg" alt="Profile Picture" class="profile-image">
+                <div class="image-container"></div>
+                    <img src="/Users/selfejji/GitHub Repos/Resume-Website/Assets/IMG_6129.png" alt="Profile Picture" class="profile-image">
+                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6533.png" alt="Cats">
+                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6172.png" alt="Guitar">
+                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_3580.png" alt="Nature">
+                </div>
+                <div class="video-container">
+                    <video width="100%" height="auto" loop autoplay muted>
+                        <source src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_0183.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="profile-text">
                     <h2>About Me</h2>
