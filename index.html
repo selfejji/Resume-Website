@@ -14,6 +14,7 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-image: url('/Users/selfejji/GitHub Repos/Resume-Website/Assets/Header-Background.PNG');
             background-size: cover;
@@ -32,11 +33,13 @@
             justify-content: center;
             background-color: #9e8637;
         }
+
         nav a {
             color: white;
             padding: 12px 65px;
             text-decoration: none;
             text-align: center;
+            transition: transform 0.3s ease, width 0.3s ease;
         }
 
         .nav-links {
@@ -49,72 +52,64 @@
         }
 
         nav a:hover {
-            background-color: #9d6900;
-            line-height: 60px;
+            transform: scale(1.2);
+            z-index: 1;
         }
-        .content {
-            padding: 20px;
-        }
-
+      
         .profile-section{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 5px;
-        }
-
-        .video-image{
-            width: 15%;
-            object-fit: cover;
-            border-radius: 5%;
-            padding: 5px;
-        }
-
-        .image-container img, .image-conatiner video {
-            width: 15%;
-            object-fit: cover;
-            border-radius: 5%;
-            padding: 5px;
-            transition: transform 0.3s ease, width 0.3s ease;
-        }
-
-        .image-container img:hover, .image-container video:hover {
-            transform: scale(1.5);
-            z-index: 1;
+            padding: 0;
         }
 
         .profile-text{
             text-align: left;
             position: relative;
             bottom: 60px;
-            right: 40px;
+            padding: 20px;
         }
 
-
-        .image-container {
+        .media-container{
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 10px;
+            align-items: center; 
+            padding: 0;
         }   
 
-        .profile-image{
+        .media-container img, .media-container video{
             object-fit: cover;
-            border-radius: 5%;
             padding: 5px;
+            border-radius: 4%;
+            transition: transform 0.3s ease, width 0.3s ease;
         }
 
-        .cat-image{
-            object-fit: cover;
-            border-radius: 5%;
-            padding: 5px;
+        .media-container img:hover, .media-container video:hover {
+            transform: scale(1.2);
+            z-index: 1;
         }
 
-        .guitar-image{
-            object-fit: cover;
-            border-radius: 5%;
-            padding: 5px;
+        .stacked-images {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
         }
+
+        .profile-image, .striper{
+            width: 300px;
+            height: 500px;
+        }
+
+        .cat-image, .guitar-image{
+            width: 300px;
+            height: 245px;
+        }
+
+        hr.solid {
+            border-top: 3px solid #000000;
+        }
+
+
         
     </style>
 </head>
@@ -125,7 +120,7 @@
     <nav>
         <div class="nav-links">
             <a href="/Users/selfejji/GitHub Repos/Resume-Website/index.html">Home</a>
-            <a href="/Users/selfejji/GitHub Repos/Resume-Website/projects.html">Projects</a>
+            <a href="/Users/selfejji/GitHub Repos/Resume-Website/dev.html">Development</a>
             <a href="/Users/selfejji/GitHub Repos/Resume-Website/certifications.html">Certifications</a>
             <a href="/Users/selfejji/GitHub Repos/Resume-Website/work-experience.html">Work Experience</a>
             <a href="/Users/selfejji/GitHub Repos/Resume-Website/contact.html">Contact</a>
@@ -134,24 +129,34 @@
     <div class="content">
         <section>
             <section class="profile-section">
-                <div class="image-container">
+                <div class="media-container">
                     <img src="/Users/selfejji/GitHub Repos/Resume-Website/Assets/IMG_6129.png" alt="Profile Picture" class="profile-image">
-                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6533.png" alt="Cats" class="cat-image">
-                    <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6172.png" alt="Guitar" class="guitar-image">
-                    <video class="video-image" loop autoplay muted>
-                         <source src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_0183.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
+                    <video class="striper" loop autoplay muted>
+                        <source src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_0183.mp4" type="video/mp4">
+                       Your browser does not support the video tag.
                     </video>
+                    <div class="stacked-images">
+                        <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6533.png" alt="Cats" class="cat-image">
+                        <img src="/Users/selfejji/Documents/GitHub/Resume-Website/Assets/IMG_6172.png" alt="Guitar" class="guitar-image">
+                    </div>
                 </div>
                 <div class="profile-text">
                     <h2>About Me</h2>
                     <p>Hello! I'm Sammy Elfejji, a passionate developer with experience in various projects, certifications, and work experiences. Welcome to my personal website where you can learn more about my professional journey and get in touch with me.</p>
                 </div>
+                <hr class="solid">
             </section>
-            <section class="">
-                <div class="">
-
-                </div>
+            <section class="dev-section">
+                
+            </section>
+            <section class="striper-section">
+                
+            </section>
+            <section class="guitar-section">
+                
+            </section>
+            <section class="cat-section">
+                
             </section>
         </section>
     </div>
