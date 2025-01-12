@@ -84,7 +84,7 @@
             transition: transform 0.3s ease, width 0.3s ease;
         }
 
-        .media-container img:hover, .media-container video:hover {
+        .media-container img:hover, .media-container video:hover, .guitar-container img:hover, .guitar-container video:hover{
             transform: scale(1.2);
             z-index: 1;
         }
@@ -107,6 +107,38 @@
 
         hr.solid {
             border-top: 3px solid #000000;
+        }
+
+        .guitar-section {
+            display: flex;
+            justify-content: flex-end; /* Align items to the right side */
+            align-items: center;
+            gap: 10px; /* Add gap between elements */
+        }
+
+        .guitar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align items to the right side */
+            padding: 0;
+            border-radius: 4%;
+            transition: transform 0.3s ease, width 0.3s ease;
+        }
+
+        .guitar-play {
+            width: 300px;
+            height: 245px;
+        }
+
+        .guitar {
+            width: 300px;
+            height: 245px;
+            align-items: flex-end;
+        }
+
+        .guitar-loop {
+            width: 600px;
+            height: 500px;
         }
 
 
@@ -146,9 +178,17 @@
                 </div>
                 <hr class="solid">
             </section>
-            </section>
             <section class="guitar-section">
-                
+                <div class="guitar-container">
+                    <div class="stacked-images">
+                        <img src="/Users/selfejji/GitHub Repos/Resume-Website/Assets/IMG_5305.png" class="guitar-play">
+                        <img src="/Users/selfejji/GitHub Repos/Resume-Website/Assets/IMG_4289.png" class="guitar">
+                        <video class="guitar-loop" loop autoplay muted>
+                            <source src="/Users/selfejji/GitHub Repos/Resume-Website/Assets/guitar.mp4" type="video/mp4">
+                           Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
             </section>
             <section class="cat-section">
             </section>
